@@ -51,6 +51,7 @@ body{
     font-size: 20px;
     color: rgb(199, 199, 199);
     border-radius: 100%;
+    cursor: pointer;
 }
 
 .top{
@@ -61,4 +62,8 @@ body{
 .bottom{
     bottom: 10px;
     left: 50%;
+}
+
+.hidden{
+    display: none;
 }
