@@ -23,13 +23,6 @@ next.addEventListener('click',
             //aggiungo la classe active all'elemento successivo
             image[activeItem].classList.add('active');
 
-
-            if (activeItem === image.length - 1) {
-
-                //arrivo all'ultima immagine
-                next.classList.add('hidden');
-            }
-
         }
 
     }
@@ -45,7 +38,7 @@ back.addEventListener('click',
 
     function(){
 
-        if (activeItem > image.lenght - 1) {
+        if (activeItem > 0) {
 
             //tolgo la classe active dall'immagine
             image[activeItem].classList.remove('active');
@@ -55,13 +48,6 @@ back.addEventListener('click',
 
             //aggiungo la classe active all'elemento successivo
             image[activeItem].classList.add('active');
-
-
-            if (activeItem === 0) {
-
-                //arrivo alla prima immagine
-                back.classList.add('hidden');
-            }
 
         }
 
