@@ -39,29 +39,32 @@ next.addEventListener('click',
 
 //configuro il bottone back per andare indietro
 
-const back = document.querySelector('top');
+const back = document.querySelector('.top');
 
 back.addEventListener('click',
 
     function(){
 
-        if (activeItem < image.lenght - 1) {
+        if (activeItem > image.lenght - 1) {
 
             //tolgo la classe active dall'immagine
-            image[activeItem].classList.add('active');
+            image[activeItem].classList.remove('active');
 
-            //aumento l'indice dell'elemento da visualizzare
+            //diminuisco l'indice dell'elemento da visualizzare
             activeItem--;
 
             //aggiungo la classe active all'elemento successivo
-            image[activeItem].classList.remove('active');
+            image[activeItem].classList.add('active');
 
 
             if (activeItem === 0) {
 
-                //arrivo all'ultima immagine
+                //arrivo alla prima immagine
                 back.classList.add('hidden');
             }
+
         }
+
     }
+    
 );
