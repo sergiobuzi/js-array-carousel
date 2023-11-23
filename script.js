@@ -23,6 +23,19 @@ next.addEventListener('click',
             //aggiungo la classe active all'elemento successivo
             image[activeItem].classList.add('active');
 
+            
+            //faccio il ciclo infito
+
+            if (activeItem === image.length - 1){
+
+                image[activeItem].classList.remove('active');
+
+                activeItem = 0;
+
+                image[activeItem].classList.add('active');
+
+            }
+
         }
 
     }
@@ -49,6 +62,19 @@ back.addEventListener('click',
             //aggiungo la classe active all'elemento successivo
             image[activeItem].classList.add('active');
 
+            
+            //faccio il ciclo infito
+
+            if (activeItem === 0){
+
+                image[activeItem].classList.remove('active');
+
+                activeItem = image.length - 1;
+
+                image[activeItem].classList.add('active');
+
+            }
+            
         }
 
     }
